@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
+
 
 export function Card (props) {
+
+    const params = useParams();
     const navigate = useHistory();
     return (
         
         <>
             <div className="container">
                 <div className="card" style={{width: "18rem"}}>
-                    <img src={props.urlImage} className="card-img-top" alt=""/>
+                    <img src={"https://starwars-visualguide.com/assets/img/characters/"+params+".jpg"} className="card-img-top" alt=""/>
                     <div className="card-body">
                         <h5 className="card-title">{props.cardTitle}</h5>
                         <p className="card-text">{props.cardText}</p>
