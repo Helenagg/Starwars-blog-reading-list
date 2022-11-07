@@ -4,18 +4,12 @@ import "../../styles/home.css";
 import {Card} from "../component/card";
 import { Characters } from "../component/characters";
 import { Planets } from "../component/planets";
+import { Vehicles } from "../component/vehicles";
 
 export const Home = () => (
 	<>
 		<Characters/>
 		<Planets/>
-		
-		<div className="container text-center d-flex mt-5">
-		<h1 className="text-danger">Vehicles</h1>
-		<div className="container text-center d-flex mt-5">
-				<Card urlImage="#" cardTitle="Ejemplo" cardText="Some quick example text to build on the card title and make up the bulk of the card's content."/>
-				
-			</div>
-		</div>
+		<Vehicles/>
 	</>
 );

@@ -26,7 +26,7 @@ export const Planets = () => {
                 {result.results?.map((planet, index) => {
                    return (
                    <Card
-                   cardImage={"https://starwars-visualguide.com/assets/img/planets/"+(index+1)+".jpg"}
+                   cardImage={"https://starwars-visualguide.com/assets/img/planets/"+(index+2)+".jpg"}
                    cardTitle={planet.name}
                    cardText={
                         <>
@@ -35,7 +35,7 @@ export const Planets = () => {
                             <p>gravity: {planet.gravity}</p>
                         </>
                     }
-                    cardButton={<Link to={"/viewDetails/"+(index+1)}></Link>}
+                    //cardButton={<Link to={"/viewDetails/"+(index+1)}/>}
                    />
                    )
                 })}

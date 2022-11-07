@@ -6,12 +6,12 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { ViewDetails } from "./views/viewDetails";
+import { DetailsCharacters } from "./views/detailsCharacters";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { Characters } from "./component/characters";
-import { Planets } from "./component/planets";
+
 
 
 //create your first component
@@ -32,11 +32,11 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-						<Route exact path="/people">
-							<Planets />
+						<Route exact path="/detailsCharacters">
+							<DetailsCharacters/>
 						</Route>
-						<Route exact path="/viewDetails">
-							<h1>All planets</h1>
+						<Route exact path="/detailsCharacters:idCharacter">
+							<DetailsCharacters/>
 						</Route>
 						<Route exact path="/viewDetails/:idPlanet">
 							<ViewDetails/>
