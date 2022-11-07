@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Card } from "./card";
+import { Link } from "react-router-dom";
 
 export const Planets = () => {
 
@@ -22,8 +24,19 @@ export const Planets = () => {
             <div className="container text-center d-flex mt-5">
                 <h1 className="text-danger">Planets</h1>
                 {result.results?.map((planet, index) => {
-                   return (<p>{planet.name}</p>
-                    
+                   return (
+                   <Card
+                   cardImage={"https://starwars-visualguide.com/assets/img/planets/"+(index+1)+".jpg"}
+                   cardTitle={planet.name}
+                   cardText={
+                        <>
+                            <p>climate: {planet.climate}</p>
+                            <p>diameter: {planet.diameter}</p>
+                            <p>gravity: {planet.gravity}</p>
+                        </>
+                    }
+                    cardButton={<Link to={"/viewDetails/"+(index+1)}></Link>}
+                   />
                    )
                 })}
             </div>

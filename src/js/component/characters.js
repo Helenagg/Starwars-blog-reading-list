@@ -35,7 +35,6 @@ export const Characters = () => {
                                 </>
                             }
                             cardButton={<Link to={"/viewDetails/"+(index+1)}></Link>}
-                        // image={"https://starwars-visualguide.com/assets/img/characters/"+1+".jpg"}
                         />
                     )
                  })}
