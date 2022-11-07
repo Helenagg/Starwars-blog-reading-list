@@ -34,7 +34,7 @@ export const Characters = () => {
                                     <p>height: {character.height}</p>
                                 </>
                             }
-                            //cardButton={<Link to={"/viewDetails/"+(index+1)}></Link>}
+                            url={"/detailsCharacters/"+(index+1)}
                         />
                     )
                  })}
