@@ -13,7 +13,7 @@ export const DetailCard = (props) =>{
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
-                                <h5 className="card-title">{props.detailTitle}</h5>
+                                <h1 className="card-title">{props.detailTitle}</h1>
                                 <p className="card-text">{props.detailText}</p>
                             </div>
                         </div>
@@ -22,25 +22,25 @@ export const DetailCard = (props) =>{
             </div>
             <div className="container text-center text-danger d-flex">
                 <p><h5 className="m-5">{props.detail1}</h5><br/>
-                <h6 className="text-dark">{props.name}</h6>
+                <h6 className="text-dark">{props.dDetail1}</h6>
                 </p>
                 <p><h5 className="m-5">{props.detail2}</h5><br/>
-                <h6 className="text-dark">{props.birthday}</h6>
+                <h6 className="text-dark">{props.dDetail2}</h6>
                 </p>
                 <p><h5 className="m-5">{props.detail3}</h5><br/>
-                <h6 className="text-dark">{props.gender}</h6>
+                <h6 className="text-dark">{props.dDetail3}</h6>
                 </p>
                 <p><h5 className="m-5">{props.detail4}</h5><br/>
-                <h6 className="text-dark">{props.height}</h6>
+                <h6 className="text-dark">{props.dDetail4}</h6>
                 </p>
                 <p><h5 className="m-5">{props.detail5}</h5><br/>
-                <h6 className="text-dark">{props.skin_color}</h6>
+                <h6 className="text-dark">{props.dDetail5}</h6>
                 </p>
                 <p><h5 className="m-5">{props.detail6}</h5><br/>
-                <h6 className="text-dark">{props.eyes_color}</h6>
+                <h6 className="text-dark">{props.dDetail6}</h6>
                 </p>
                 <p><h5 className="m-5">{props.detail7}</h5><br/>
-                <h6 className="text-dark">{props.hair_color}</h6>
+                <h6 className="text-dark">{props.dDetail7}</h6>
                 </p>                
             </div>
         </>
