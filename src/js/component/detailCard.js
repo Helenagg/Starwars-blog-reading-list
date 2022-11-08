@@ -21,25 +21,25 @@ export const DetailCard = (props) =>{
                 </div>
             </div>
             <div className="container text-center text-danger d-flex">
-                <p><h5 className="m-5">Name</h5><br/>
+                <p><h5 className="m-5">{props.detail1}</h5><br/>
                 <h6 className="text-dark">{props.name}</h6>
                 </p>
-                <p><h5 className="m-5">Birthday</h5><br/>
+                <p><h5 className="m-5">{props.detail2}</h5><br/>
                 <h6 className="text-dark">{props.birthday}</h6>
                 </p>
-                <p><h5 className="m-5">Gender</h5><br/>
+                <p><h5 className="m-5">{props.detail3}</h5><br/>
                 <h6 className="text-dark">{props.gender}</h6>
                 </p>
-                <p><h5 className="m-5">Height</h5><br/>
+                <p><h5 className="m-5">{props.detail4}</h5><br/>
                 <h6 className="text-dark">{props.height}</h6>
                 </p>
-                <p><h5 className="m-5">Skin</h5><br/>
+                <p><h5 className="m-5">{props.detail5}</h5><br/>
                 <h6 className="text-dark">{props.skin_color}</h6>
                 </p>
-                <p><h5 className="m-5">Eyes</h5><br/>
+                <p><h5 className="m-5">{props.detail6}</h5><br/>
                 <h6 className="text-dark">{props.eyes_color}</h6>
                 </p>
-                <p><h5 className="m-5">Hair</h5><br/>
+                <p><h5 className="m-5">{props.detail7}</h5><br/>
                 <h6 className="text-dark">{props.hair_color}</h6>
                 </p>                
             </div>

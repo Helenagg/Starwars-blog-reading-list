@@ -34,7 +34,14 @@ export const DetailsCharacters = () => {
                     <p>mass: {result?.mass}</p>
                     <p>skin_color: {result?.skin_color}</p>
                     <p>homeworld: {result?.homeworld}</p>
-                </>} 
+                </>}
+                detail1="Name"
+                detail2="Birthday"
+                detail3="Gender"
+                detail4="Height"
+                detail5="Skin"
+                detail6="Eyes"
+                detail7="Hair"
                 name={result?.name}
                 birthday={result?.birth_year} 
                 gender={result?.gender}
