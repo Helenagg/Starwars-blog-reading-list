@@ -29,9 +29,7 @@ export const Characters = () => {
                             cardTitle={character.name}
                             cardText={
                                 <>
-                                    <p>birth_year: {character.birth_year}</p>
-                                    <p>gender: {character.gender}</p>
-                                    <p>height: {character.height}</p>
+                                   <p>{character.name} is a character from Star Wards. Born this year {character.birth_year}. His height is {character.height} and his mass is {character.mass}.</p>
                                 </>
                             }
                             url={"/detailsCharacters/"+(index+1)}

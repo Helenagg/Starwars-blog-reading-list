@@ -30,9 +30,7 @@ export const Planets = () => {
                    cardTitle={planet.name}
                    cardText={
                         <>
-                            <p>climate: {planet.climate}</p>
-                            <p>diameter: {planet.diameter}</p>
-                            <p>gravity: {planet.gravity}</p>
+                            <p>{planet.name} it is a planet with a type of climate {planet.climate} with a diameter of {planet.diameter} and an orbital period {planet.orbital_period}</p>
                         </>
                     }
                     //cardButton={<Link to={"/viewDetails/"+(index+1)}/>}

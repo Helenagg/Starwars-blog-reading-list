@@ -10,7 +10,7 @@ export function Card (props) {
         
         <>
             <div className="container">
-                <div className="card" style={{width: "18rem"}}>
+                <div className="card" style={{width: "20rem"}}>
                     <img src={props.cardImage} className="card-img-top" alt=""/>
                     <div className="card-body">
                         <h2 className="card-title">{props.cardTitle}</h2>

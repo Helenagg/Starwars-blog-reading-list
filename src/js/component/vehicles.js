@@ -29,9 +29,7 @@ export const Vehicles = () => {
                                 cardTitle={vehicles.name}
                                 cardText={
                                     <>
-                                        <p>model: {vehicles.model}</p>
-                                        <p>cargo_capacity: {vehicles.cargo_capacity}</p>
-                                        <p>consumables: {vehicles.consumables}</p>
+                                        <p>{vehicles.name} it is a vehicle classified as {vehicles.classification} and appointed as {vehicles.designation}</p>
                                     </>
                                 }
                             />
