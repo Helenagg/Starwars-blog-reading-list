@@ -32,6 +32,7 @@ export const Vehicles = () => {
                                         <p>{vehicles.name} it is a vehicle classified as {vehicles.classification} and appointed as {vehicles.designation}</p>
                                     </>
                                 }
+                                url={"/detailsVehicles/"+(index+1)}
                             />
                         )
                     })}

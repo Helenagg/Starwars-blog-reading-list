@@ -33,7 +33,7 @@ export const Planets = () => {
                             <p>{planet.name} it is a planet with a type of climate {planet.climate} with a diameter of {planet.diameter} and an orbital period {planet.orbital_period}</p>
                         </>
                     }
-                    //cardButton={<Link to={"/viewDetails/"+(index+1)}/>}
+                    url={"/detailsPlanets/"+(index+2)}
                    />
                    )
                 })}

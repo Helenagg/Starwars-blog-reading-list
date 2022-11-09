@@ -22,21 +22,29 @@ export const DetailsPlanets = () => {
 
     return (
         <>
-            <h1>Planet {result?.name}</h1>,
             <DetailCard
                 detailImage={"https://starwars-visualguide.com/assets/img/planets/"+params.idPlanet+".jpg"}
                 detailTitle={result?.name}
                 detailText={
                     <>
-                    <p>climate: {result?.climate}</p>
-                    <p>diameter: {result?.diameter}</p>
-                    <p>gravity: {result?.gravity}</p>
-                    {/*<p>orbital_period: {result?.orbital_period}</p>
-                     <p>population: {result?.population}</p>
-                    <p>homeworld: {result?.homeworld}</p> */}
+                    <p>{result?.name} is a planet in which {result?.population} inhabitants live, with a climate {result?.climate} and terrain {result?.terrain}, whose diameter is {result?.diameter}.</p>
+                    <p>It has a constant gravity of {result?.gravity}. An orbital period of {result?.orbital_period} and a rotational period of {result?.rotation_period}</p>
                     </>                    
                 }
-                
+                detail1="Name"
+                dDetail1={result?.name}
+                detail2="Climate"
+                dDetail2={result?.climate}
+                detail3="Terrain"
+                dDetail3={result?.terrain}
+                detail4="Gravity"
+                dDetail4={result?.gravity}
+                detail5="Population"
+                dDetail5={result?.population}
+                detail6="Diameter"
+                dDetail6={result?.diameter}
+                detail7="Water"
+                dDetail7={result?.surface_water}
             />
         </>
     )

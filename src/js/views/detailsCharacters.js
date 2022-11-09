@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { DetailCard } from "../component/detailCard";
 
-export const DetailsCharacters = () => {
+export const DetailsCharacters = (props) => {
 
     const params = useParams();
     const [result, setResult] = useState({})
@@ -23,17 +23,14 @@ export const DetailsCharacters = () => {
 
     return (
         <>
+       
             <DetailCard 
             detailImage={"https://starwars-visualguide.com/assets/img/characters/"+(params.idCharacter)+".jpg"}
             detailTitle={result?.name}
             detailText={
-                <>          
-                    <p>birth_year: {result?.birth_year}</p>
-                    <p>gender: {result?.gender}</p>
-                    <p>height: {result?.height}</p>
-                    <p>mass: {result?.mass}</p>
-                    <p>skin_color: {result?.skin_color}</p>
-                    <p>homeworld: {result?.homeworld}</p>
+                <> 
+                    <p>{result?.name} is a character born in the year {result?.birth_year}. He is gender {result?.gender}, his height is {result?.height} and your mass is {result?.mass}.</p>
+                    <p>He has colored eyes {result?.eye_color}, her hair is {result?.hair_color} and her skin is {result?.skin_color}.</p>
                 </>}
                 detail1="Name"
                 dDetail1={result?.name}
