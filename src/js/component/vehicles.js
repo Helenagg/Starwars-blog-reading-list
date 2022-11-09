@@ -20,22 +20,24 @@ export const Vehicles = () => {
 
     return (
         <>
-            <div className="container text-center d-flex mt-5">
-                    <h1 className="text-danger">Vehicles</h1>
-                    {result.results?.map((vehicles, index) =>{
-                        return (
-                            <Card
-                                cardImage={"https://starwars-visualguide.com/assets/img/vehicles/"+(index+4)+".jpg"}
-                                cardTitle={vehicles.name}
-                                cardText={
-                                    <>
-                                        <p>{vehicles.name} it is a vehicle classified as {vehicles.model} and created by {vehicles.manufacturer}</p>
-                                    </>
-                                }
-                                url={"/detailsVehicles/"+(index+1)}
-                            />
-                        )
-                    })}
+            <div className="col-12 text-center border-bottom border-danger mt-4">
+            <h1 className="text-danger">Vehicles</h1>
+            </div>
+            <div className="container text-center d-flex mt-5 mb-5" style={{overflow: "auto"}}>                    
+                {result.results?.map((vehicles, index) =>{
+                    return (
+                        <Card
+                            cardImage={"https://starwars-visualguide.com/assets/img/vehicles/"+(index+4)+".jpg"}
+                            cardTitle={vehicles.name}
+                            cardText={
+                                <>
+                                    <p>{vehicles.name} it is a vehicle classified as {vehicles.model} and created by {vehicles.manufacturer}</p>
+                                </>
+                            }
+                            url={"/detailsVehicles/"+(index+1)}
+                        />
+                    )
+                })}
             </div>
         </>        
     )

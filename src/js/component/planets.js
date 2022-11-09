@@ -21,18 +21,20 @@ export const Planets = () => {
 
     return (
         <>
-            <div className="container text-center d-flex mt-5">
+            <div className="col-12 text-center border-bottom border-danger mt-4">
                 <h1 className="text-danger">Planets</h1>
+            </div>
+            <div className="container text-center d-flex mt-5" style={{overflow: "auto"}}>                
                 {result.results?.map((planet, index) => {
                    return (
                    <Card
-                   cardImage={"https://starwars-visualguide.com/assets/img/planets/"+(index+2)+".jpg"}
-                   cardTitle={planet.name}
-                   cardText={
-                        <>
-                            <p>{planet.name} it is a planet with a type of climate {planet.climate} with a diameter of {planet.diameter} and an orbital period {planet.orbital_period}</p>
-                        </>
-                    }
+                    cardImage={"https://starwars-visualguide.com/assets/img/planets/"+(index+2)+".jpg"}
+                    cardTitle={planet.name}
+                    cardText={
+                            <>
+                                <p>{planet.name} it is a planet with a type of climate {planet.climate} with a diameter of {planet.diameter} and an orbital period {planet.orbital_period}</p>
+                            </>
+                        }
                     url={"/detailsPlanets/"+(index+2)}
                    />
                    )

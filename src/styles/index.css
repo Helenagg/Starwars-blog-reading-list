@@ -1,3 +1,7 @@
 /* 
     General Styles
 */
+
+* {
+    background-color: black;
+}

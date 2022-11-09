@@ -20,8 +20,10 @@ export const Characters = () => {
 
     return (
         <>
-            <div className="container text-center d-flex mt-5">
+            <div className="col-12 text-center border-bottom border-danger">
                 <h1 className="text-danger">Characters</h1>
+            </div>
+            <div className="container text-center d-flex mt-5" style={{overflow: "auto"}}>                
                 {result.results?.map((character,index) => {
                     return (            
                         <Card 
@@ -29,14 +31,13 @@ export const Characters = () => {
                             cardTitle={character.name}
                             cardText={
                                 <>
-                                   <p>{character.name} is a character from Star Wards. Born this year {character.birth_year}. His height is {character.height} and his mass is {character.mass}.</p>
+                                <p>{character.name} is a character from Star Wards. Born this year {character.birth_year}. His height is {character.height} and his mass is {character.mass}.</p>
                                 </>
                             }
                             url={"/detailsCharacters/"+(index+1)}
                         />
                     )
-                 })}
-                       
+                })}                       
             </div>
         </>
         

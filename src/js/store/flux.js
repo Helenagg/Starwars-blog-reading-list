@@ -13,6 +13,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			]
+
+			// arrFavorites: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -34,6 +36,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
+
+				// const addFavorite = (favorite) => {
+				// 	setStore(store.arrFavorites.concat(favorite))
+				// }
 
 				//reset the global store
 				setStore({ demo: demo });

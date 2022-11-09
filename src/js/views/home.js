@@ -8,8 +8,10 @@ import { Vehicles } from "../component/vehicles";
 
 export const Home = () => (
 	<>
+		<div>
 		<Characters/>
 		<Planets/>
 		<Vehicles/>
+		</div>
 	</>
 );
