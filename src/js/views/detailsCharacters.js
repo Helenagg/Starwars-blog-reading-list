@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { DetailCard } from "../component/detailCard";
 
-export const DetailsCharacters = (props) => {
+export const DetailsCharacters = () => {
 
     const params = useParams();
     const [result, setResult] = useState({})

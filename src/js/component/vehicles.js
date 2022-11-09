@@ -25,11 +25,11 @@ export const Vehicles = () => {
                     {result.results?.map((vehicles, index) =>{
                         return (
                             <Card
-                                cardImage={"https://starwars-visualguide.com/assets/img/vehicles/"+(index+1)+".jpg"}
+                                cardImage={"https://starwars-visualguide.com/assets/img/vehicles/"+(index+4)+".jpg"}
                                 cardTitle={vehicles.name}
                                 cardText={
                                     <>
-                                        <p>{vehicles.name} it is a vehicle classified as {vehicles.classification} and appointed as {vehicles.designation}</p>
+                                        <p>{vehicles.name} it is a vehicle classified as {vehicles.model} and created by {vehicles.manufacturer}</p>
                                     </>
                                 }
                                 url={"/detailsVehicles/"+(index+1)}
