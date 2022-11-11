@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			arrFav: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -14,7 +15,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			]
 
-			// arrFavorites: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -26,6 +26,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
+
+			addFavorite: (e) => {				
+				const store = getStore();
+				const resultFav = store.arrFav.concat(e);
+				setStore({arrFav: resultFav});
+			}, 
+
+			// deleteFav: (element, index) => {
+			// 	const store = getStore();
+			// 	const resultDelete = store.arrFav.filter((element) => element!==index);
+			// 	setStore({arrFav: resultDelete});
+			// },
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
@@ -36,10 +49,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
-
-				// const addFavorite = (favorite) => {
-				// 	setStore(store.arrFavorites.concat(favorite))
-				// }
 
 				//reset the global store
 				setStore({ demo: demo });

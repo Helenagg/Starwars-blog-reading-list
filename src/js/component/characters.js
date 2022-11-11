@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Card } from "./card";
+import { Context } from "../store/appContext";
 
 export const Characters = () => {
+
+    const { store, actions } = useContext(Context);
 
     const [result, setResult] = useState({});
     useEffect (() => {
@@ -35,9 +38,18 @@ export const Characters = () => {
                                 </>
                             }
                             url={"/detailsCharacters/"+(index+1)}
+                            // cardButton={onClick=() => actions.addFavorite(
+                            //     {
+                            //         title: "Third",
+                            //         background: "white",
+                            //         initial: "white"
+                            //     }
+                            // )}
                         />
+                    
+                        
                     )
-                })}                       
+                })}                  
             </div>
         </>
         
