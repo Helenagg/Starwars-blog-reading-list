@@ -5,7 +5,6 @@ import { Context } from "../store/appContext";
 
 export const Characters = () => {
 
-    const { store, actions } = useContext(Context);
 
     const [result, setResult] = useState({});
     useEffect (() => {
@@ -26,7 +25,7 @@ export const Characters = () => {
             <div className="col-12 text-center border-bottom border-danger">
                 <h1 className="text-danger">Characters</h1>
             </div>
-            <div className="container text-center d-flex mt-5" style={{overflow: "auto"}}>                
+            <div className="container text-center d-flex mt-5 overflow-auto">                
                 {result.results?.map((character,index) => {
                     return (            
                         <Card 
@@ -38,13 +37,6 @@ export const Characters = () => {
                                 </>
                             }
                             url={"/detailsCharacters/"+(index+1)}
-                            // cardButton={onClick=() => actions.addFavorite(
-                            //     {
-                            //         title: "Third",
-                            //         background: "white",
-                            //         initial: "white"
-                            //     }
-                            // )}
                         />
                     
                         

@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			arrFav: [],
+			favs: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -29,15 +29,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addFavorite: (e) => {				
 				const store = getStore();
-				const resultFav = store.arrFav.concat(e);
-				setStore({arrFav: resultFav});
+				const resultFav = store.favs.concat(e);
+				setStore({favs: resultFav});
 			}, 
 
-			// deleteFav: (element, index) => {
-			// 	const store = getStore();
-			// 	const resultDelete = store.arrFav.filter((element) => element!==index);
-			// 	setStore({arrFav: resultDelete});
-			// },
+			deleteFav: (index) => {
+				const store = getStore();
+				//const resultDelete = store.arrFav.filter((i, index, arrFav) => i!==index);
+				setStore({favs: store.favs.filter((fav, i, arr) => i !==index)});
+				console.log(favs);
+			},
 
 			changeColor: (index, color) => {
 				//get the store
@@ -49,6 +50,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
+				
 
 				//reset the global store
 				setStore({ demo: demo });

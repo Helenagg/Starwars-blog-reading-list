@@ -23,7 +23,7 @@ export const Vehicles = () => {
             <div className="col-12 text-center border-bottom border-danger mt-4">
             <h1 className="text-danger">Vehicles</h1>
             </div>
-            <div className="container text-center d-flex mt-5 mb-5" style={{overflow: "auto"}}>                    
+            <div className="container text-center d-flex mt-5 mb-5 overflow-auto">                    
                 {result.results?.map((vehicles, index) =>{
                     return (
                         <Card

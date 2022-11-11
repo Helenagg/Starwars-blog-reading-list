@@ -24,7 +24,7 @@ export const Planets = () => {
             <div className="col-12 text-center border-bottom border-danger mt-4">
                 <h1 className="text-danger">Planets</h1>
             </div>
-            <div className="container text-center d-flex mt-5" style={{overflow: "auto"}}>                
+            <div className="container text-center d-flex mt-5 overflow-auto">                
                 {result.results?.map((planet, index) => {
                    return (
                    <Card
