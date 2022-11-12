@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import { Card } from "./card";
-import { Context } from "../store/appContext";
+
 
 export const Characters = () => {
 
@@ -37,9 +36,7 @@ export const Characters = () => {
                                 </>
                             }
                             url={"/detailsCharacters/"+(index+1)}
-                        />
-                    
-                        
+                        />                   
                     )
                 })}                  
             </div>

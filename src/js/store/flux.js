@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			favs: [],
+			count: 0,
 			demo: [
 				{
 					title: "FIRST",
@@ -35,9 +36,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			deleteFav: (index) => {
 				const store = getStore();
-				//const resultDelete = store.arrFav.filter((i, index, arrFav) => i!==index);
 				setStore({favs: store.favs.filter((fav, i, arr) => i !==index)});
-				console.log(favs);
+			},
+
+			addCount: () => {
+				const store = getStore();
+				setStore(store.count++);
+			},
+
+			deleteCount: () => {
+				const store = getStore();
+				setStore(store.count--);
 			},
 
 			changeColor: (index, color) => {

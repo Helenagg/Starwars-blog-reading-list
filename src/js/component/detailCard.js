@@ -1,20 +1,21 @@
-import React, {Component} from "react";
-import {Link, useHistory} from "react-router-dom";
+import React from "react";
 
 export const DetailCard = (props) =>{
     
     return (
         <>
            <div className="container text-center border-bottom border-danger text-white">
-                <div className="card mb-3" style={{maxWidth: "700px"}}>
-                    <div className="row g-0">
-                        <div className="col-md-4">
-                            <img src={props.detailImage} className="img-fluid rounded-start" alt="image"/>
-                        </div>
-                        <div className="col-md-8">
-                            <div className="card-body">
-                                <h1 className="card-title">{props.detailTitle}</h1>
-                                <p className="card-text">{props.detailText}</p>
+                <div class="row justify-content-center m-0 p-0">
+                    <div className="card mb-3 bg-black border-bottom" style={{maxWidth: "700px"}}>
+                        <div className="row g-0">
+                            <div className="col-md-4">
+                                <img src={props.detailImage} className="img-fluid rounded-start" alt="image"/>
+                            </div>
+                            <div className="col-md-8">
+                                <div className="card-body">
+                                    <h1 className="card-title">{props.detailTitle}</h1>
+                                    <p className="card-text">{props.detailText}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
